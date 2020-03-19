@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Product} from '../product'
+import{ProductService} from '../product.service';
+import {Product} from '../Product'
 
 @Component({
   selector: 'app-product-list',
@@ -8,44 +9,35 @@ import {Product} from '../product'
 })
 export class ProductListComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-  products : Product[] = [
-    {
-      name : 'Item 1',
-      price : 25.9,
-      desc : "Nội dung mô tả sản phẩm",
-      status : true,
-      img: "https://dummyimage.com/700x400/000000/fff"
-   },
-   {
-    name : 'Item 2',
-    price : 25.9,
-    desc : "Nội dung mô tả sản phẩm",
-    status : true,
-    img: "https://dummyimage.com/700x400/000000/fff"
-  },
-  {
-    name : 'Item 3',
-    price : 25.9,
-    desc : "Nội dung mô tả sản phẩm",
-    status : true,
-    img: "https://dummyimage.com/700x400/000000/fff"
-  }
-
-  ]
+ constructor(private productService: ProductService) {
     
+   }
 
-  changeStatus(){
-    // this.product.status = false;
-  }
-  changeTitle(e){
-  //  this.product = e.target.value;
+  ngOnInit(): void {
+    this.getProducts();
   }
 
-  // removeItem(id){
-  //   this.products = this.products.filter(product => product.id != id);
+  products : Product[];
+
+  selected : Product;
+
+  // changeStatus(){
+  //   // this.product.status = false;
   // }
+  // changeTitle(e){
+  // //  this.product = e.target.value;
+  // }
+
+  removeItem(id){
+    this.products = this.products.filter(product => product.id != id);
+  }
+
+  getProducts(){
+    this.products = this.productService.getProducts();
+  }
+
+  showDetail(product){
+    this.selected = product;
+    console.log(product); 
+  }
 }
