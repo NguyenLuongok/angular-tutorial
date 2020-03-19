@@ -38,6 +38,5 @@ export class ProductListComponent implements OnInit {
 
   showDetail(product){
     this.selected = product;
-    console.log(product); 
   }
 }
