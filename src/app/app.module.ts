@@ -8,11 +8,18 @@ import { ProductComponent } from './product/product.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { SlideComponent } from './slide/slide.component';
 import { CategoryComponent } from './category/category.component';
+import { ProductManagerComponent } from './product-manager/product-manager.component';
+import { AboutComponent } from './about/about.component';
+import { ServiceComponent } from './service/service.component';
+import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductAddComponent } from './product-add/product-add.component';
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, ProductComponent, ProductListComponent, SlideComponent, CategoryComponent ],
+  declarations: [ AppComponent, HelloComponent, ProductComponent, ProductListComponent, SlideComponent, CategoryComponent, ProductManagerComponent, AboutComponent, ServiceComponent, HomeComponent, NotFoundComponent, ProductDetailComponent, ProductAddComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
