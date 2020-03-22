@@ -5,7 +5,7 @@ import {ProductComponent} from './product/product.component';
 import {ProductListComponent} from './product-list/product-list.component';
 import {ProductManagerComponent} from './product-manager/product-manager.component';
 import {ServiceComponent} from './service/service.component';
-import {SlideComponent} from './slide/silde.component';
+import {SlideComponent} from './slide/slide.component';
 import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {ProductDetailComponent} from'./product-detail/product-detail.component';

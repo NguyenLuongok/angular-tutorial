@@ -15,11 +15,13 @@ import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductAddComponent } from './product-add/product-add.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, ProductComponent, ProductListComponent, SlideComponent, CategoryComponent, ProductManagerComponent, AboutComponent, ServiceComponent, HomeComponent, NotFoundComponent, ProductDetailComponent, ProductAddComponent ],
+  imports:      [ BrowserModule, FormsModule, AppRoutingModule ],
+  declarations: [ AppComponent, HelloComponent, ProductComponent, ProductListComponent, SlideComponent, CategoryComponent, ProductManagerComponent, AboutComponent, ServiceComponent, HomeComponent, NotFoundComponent, ProductDetailComponent, ProductAddComponent,NavigationComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
